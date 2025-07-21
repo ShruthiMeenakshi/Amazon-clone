@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronica - Online Shopping for Electronics, Computers, Home & more</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'electronica-blue': '#131921',
+                        'electronica-light-blue': '#232F3E',
+                        'electronica-yellow': '#FEBD69',
+                        'electronica-orange': '#F3A847',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-electronica-blue text-white">
+        <!-- Top Nav -->
+        <div class="flex items-center px-4 py-2">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#" class="border border-transparent hover:border-white p-2">
+                    <i class="fas fa-bars text-sm mr-1"></i>
+                </a>
+                <a href="#" class="border border-transparent hover:border-white p-2">
+                    <span class="text-2xl font-bold text-white">Electronica</span>
+                </a>
+            </div>
+
+            <!-- Delivery Location -->
+            <div class="hidden md:flex items-center mx-2 border border-transparent hover:border-white p-2 cursor-pointer">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                <div>
+                    <div class="text-xs text-gray-300">Deliver to</div>
+                    <div class="text-sm font-bold">United States</div>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex flex-1 mx-2">
+                <div class="flex w-full">
+                    <select class="bg-gray-100 text-black text-sm px-2 py-2 rounded-l-md border-r border-gray-300 focus:outline-none">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Home</option>
+                        <option>Garden</option>
+                    </select>
+                    <input type="text" class="flex-grow px-4 py-2 focus:outline-none text-black">
+                    <button class="bg-electronica-yellow hover:bg-electronica-orange text-black px-4 py-2 rounded-r-md">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="hidden md:flex items-center mx-1 border border-transparent hover:border-white p-2 cursor-pointer">
+                <img src="https://flagcdn.com/w20/us.png" alt="US Flag" class="h-4 mr-1">
+                <span class="text-sm font-bold">EN</span>
+                <i class="fas fa-caret-down ml-1"></i>
+            </div>
+
+            <!-- Account & Lists -->
+            <div class="hidden md:flex flex-col mx-1 border border-transparent hover:border-white p-2 cursor-pointer">
+                <div class="text-xs">Hello, Sign in</div>
+                <div class="text-sm font-bold">Account & Lists <i class="fas fa-caret-down"></i></div>
+            </div>
+
+            <!-- Returns & Orders -->
+            <div class="hidden md:flex flex-col mx-1 border border-transparent hover:border-white p-2 cursor-pointer">
+                <div class="text-xs">Returns</div>
+                <div class="text-sm font-bold">& Orders</div>
+            </div>
+
+            <!-- Cart -->
+            <div class="flex items-center mx-1 border border-transparent hover:border-white p-2 cursor-pointer">
+                <div class="relative">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span class="absolute -top-1 -right-1 bg-electronica-orange text-black text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </div>
+                <span class="text-sm font-bold ml-1">Cart</span>
+            </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="flex items-center bg-electronica-light-blue px-4 py-2 text-sm">
+            <div class="flex items-center mr-4 border border-transparent hover:border-white p-1 cursor-pointer">
+                <i class="fas fa-bars mr-1"></i>
+                <span>All</span>
+            </div>
+            <a href="#" class="mr-4 border border-transparent hover:border-white p-1 cursor-pointer">Today's Deals</a>
+            <a href="#" class="mr-4 border border-transparent hover:border-white p-1 cursor-pointer">Customer Service</a>
+            <a href="#" class="mr-4 border border-transparent hover:border-white p-1 cursor-pointer">Registry</a>
+            <a href="#" class="mr-4 border border-transparent hover:border-white p-1 cursor-pointer">Gift Cards</a>
+            <a href="#" class="mr-4 border border-transparent hover:border-white p-1 cursor-pointer">Sell</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative">
+        <div class="h-80 bg-gradient-to-r from-blue-500 to-purple-600 w-full"></div>
+        <div class="absolute top-0 left-0 right-0 flex justify-center items-center h-80">
+            <div class="text-center text-white px-4">
+                <h1 class="text-4xl font-bold mb-4">Welcome to Electronica</h1>
+                <p class="text-xl mb-6">Shop the best electronics and gadgets at amazing prices</p>
+                <button class="bg-electronica-yellow hover:bg-electronica-orange text-black font-bold py-2 px-6 rounded-md">
+                    Shop Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6">Featured Products</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <img src="https://m.media-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg" alt="Smartphone" class="h-full object-contain">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Premium Smartphone</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(1,234)</span>
+                    </div>
+                    <p class="text-gray-800 mb-2">$599.99</p>
+                    <p class="text-green-600 text-sm mb-2">FREE Delivery</p>
+                    <button class="w-full bg-electronica-yellow hover:bg-electronica-orange text-black py-1 rounded-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <img src="https://m.media-amazon.com/images/I/61L1ItFgFHL._AC_SX679_.jpg" alt="Laptop" class="h-full object-contain">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Ultra Slim Laptop</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(2,456)</span>
+                    </div>
+                    <p class="text-gray-800 mb-2">$899.99</p>
+                    <p class="text-green-600 text-sm mb-2">FREE Delivery</p>
+                    <button class="w-full bg-electronica-yellow hover:bg-electronica-orange text-black py-1 rounded-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <img src="https://m.media-amazon.com/images/I/71zny7BTRlL._AC_SL1500_.jpg" alt="Headphones" class="h-full object-contain">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Wireless Headphones</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(3,789)</span>
+                    </div>
+                    <p class="text-gray-800 mb-2">$149.99</p>
+                    <p class="text-green-600 text-sm mb-2">FREE Delivery</p>
+                    <button class="w-full bg-electronica-yellow hover:bg-electronica-orange text-black py-1 rounded-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <img src="https://m.media-amazon.com/images/I/61BGE6iu4AL._AC_SL1500_.jpg" alt="Smart Watch" class="h-full object-contain">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Smart Watch</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(1,987)</span>
+                    </div>
+                    <p class="text-gray-800 mb-2">$199.99</p>
+                    <p class="text-green-600 text-sm mb-2">FREE Delivery</p>
+                    <button class="w-full bg-electronica-yellow hover:bg-electronica-orange text-black py-1 rounded-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deals Section -->
+    <div class="bg-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Today's Deals</h2>
+                <a href="#" class="text-electronica-blue hover:text-electronica-light-blue font-medium">See all deals</a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Deal 1 -->
+                <div class="border border-gray-200 rounded-md p-3 hover:shadow-md transition-shadow">
+                    <div class="h-32 bg-gray-100 mb-3 flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/71WkDp+uqaL._AC_SL1500_.jpg" alt="Tablet" class="h-full object-contain">
+                    </div>
+                    <div class="bg-red-600 text-white text-xs font-bold px-2 py-1 inline-block rounded mb-1">35% off</div>
+                    <div class="text-red-600 font-bold mb-1">$249.99</div>
+                    <div class="text-xs text-gray-500 line-through mb-2">$379.99</div>
+                    <p class="text-sm">Premium Tablet</p>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="border border-gray-200 rounded-md p-3 hover:shadow-md transition-shadow">
+                    <div class="h-32 bg-gray-100 mb-3 flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/61+Q6RhJD6L._AC_SL1500_.jpg" alt="Speaker" class="h-full object-contain">
+                    </div>
+                    <div class="bg-red-600 text-white text-xs font-bold px-2 py-1 inline-block rounded mb-1">25% off</div>
+                    <div class="text-red-600 font-bold mb-1">$89.99</div>
+                    <div class="text-xs text-gray-500 line-through mb-2">$119.99</div>
+                    <p class="text-sm">Bluetooth Speaker</p>
+                </div>
+
+                <!-- Deal 3 -->
+                <div class="border border-gray-200 rounded-md p-3 hover:shadow-md transition-shadow">
+                    <div class="h-32 bg-gray-100 mb-3 flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/71sBtM3Yi5L._AC_SL1500_.jpg" alt="Camera" class="h-full object-contain">
+                    </div>
+                    <div class="bg-red-600 text-white text-xs font-bold px-2 py-1 inline-block rounded mb-1">20% off</div>
+                    <div class="text-red-600 font-bold mb-1">$399.99</div>
+                    <div class="text-xs text-gray-500 line-through mb-2">$499.99</div>
+                    <p class="text-sm">Digital Camera</p>
+                </div>
+
+                <!-- Deal 4 -->
+                <div class="border border-gray-200 rounded-md p-3 hover:shadow-md transition-shadow">
+                    <div class="h-32 bg-gray-100 mb-3 flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/71OZY035QCL._AC_SL1500_.jpg" alt="Monitor" class="h-full object-contain">
+                    </div>
+                    <div class="bg-red-600 text-white text-xs font-bold px-2 py-1 inline-block rounded mb-1">15% off</div>
+                    <div class="text-red-600 font-bold mb-1">$169.99</div>
+                    <div class="text-xs text-gray-500 line-through mb-2">$199.99</div>
+                    <p class="text-sm">24" Monitor</p>
+                </div>
+
+                <!-- Deal 5 -->
+                <div class="border border-gray-200 rounded-md p-3 hover:shadow-md transition-shadow">
+                    <div class="h-32 bg-gray-100 mb-3 flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_SL1500_.jpg" alt="Router" class="h-full object-contain">
+                    </div>
+                    <div class="bg-red-600 text-white text-xs font-bold px-2 py-1 inline-block rounded mb-1">30% off</div>
+                    <div class="text-red-600 font-bold mb-1">$69.99</div>
+                    <div class="text-xs text-gray-500 line-through mb-2">$99.99</div>
+                    <p class="text-sm">Wi-Fi Router</p>
+                </div>
+
+                <!-- Deal 6 -->
+                <div class="border border-gray-200 rounded-md p-3 hover:shadow-md transition-shadow">
+                    <div class="h-32 bg-gray-100 mb-3 flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/71Y1S1m-QAL._AC_SL1500_.jpg" alt="Keyboard" class="h-full object-contain">
+                    </div>
+                    <div class="bg-red-600 text-white text-xs font-bold px-2 py-1 inline-block rounded mb-1">40% off</div>
+                    <div class="text-red-600 font-bold mb-1">$47.99</div>
+                    <div class="text-xs text-gray-500 line-through mb-2">$79.99</div>
+                    <p class="text-sm">Mechanical Keyboard</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6">Shop by Category</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <!-- Category 1 -->
+            <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-mobile-alt text-4xl text-electronica-blue"></i>
+                </div>
+                <div class="p-4 text-center font-medium">Smartphones</div>
+            </a>
+
+            <!-- Category 2 -->
+            <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-laptop text-4xl text-electronica-blue"></i>
+                </div>
+                <div class="p-4 text-center font-medium">Laptops</div>
+            </a>
+
+            <!-- Category 3 -->
+            <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-headphones text-4xl text-electronica-blue"></i>
+                </div>
+                <div class="p-4 text-center font-medium">Audio</div>
+            </a>
+
+            <!-- Category 4 -->
+            <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-gamepad text-4xl text-electronica-blue"></i>
+                </div>
+                <div class="p-4 text-center font-medium">Gaming</div>
+            </a>
+
+            <!-- Category 5 -->
+            <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-tablet-alt text-4xl text-electronica-blue"></i>
+                </div>
+                <div class="p-4 text-center font-medium">Tablets</div>
+            </a>
+
+            <!-- Category 6 -->
+            <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-tv text-4xl text-electronica-blue"></i>
+                </div>
+                <div class="p-4 text-center font-medium">TVs</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-electronica-light-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Get to Know Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                        <li><a href="#" class="hover:underline">Press Releases</a></li>
+                        <li><a href="#" class="hover:underline">Electronica Science</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Make Money with Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Sell products on Electronica</a></li>
+                        <li><a href="#" class="hover:underline">Sell on Electronica Business</a></li>
+                        <li><a href="#" class="hover:underline">Become an Affiliate</a></li>
+                        <li><a href="#" class="hover:underline">Advertise Your Products</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Electronica Payment Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Electronica Business Card</a></li>
+                        <li><a href="#" class="hover:underline">Shop with Points</a></li>
+                        <li><a href="#" class="hover:underline">Reload Your Balance</a></li>
+                        <li><a href="#" class="hover:underline">Electronica Currency Converter</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Let Us Help You</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Your Account</a></li>
+                        <li><a href="#" class="hover:underline">Your Orders</a></li>
+                        <li><a href="#" class="hover:underline">Shipping Rates & Policies</a></li>
+                        <li><a href="#" class="hover:underline">Returns & Replacements</a></li>
+                        <li><a href="#" class="hover:underline">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 mt-8 pt-8">
+                <div class="flex justify-center">
+                    <a href="#" class="mx-4">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="#" class="mx-4">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="mx-4">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="mx-4">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 text-sm">
+                <p>Conditions of Use & Sale | Privacy Notice | Interest-Based Ads</p>
+                <p class="mt-2">© 1996-2023, Electronica.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
